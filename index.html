@@ -4,23 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOSMARA AI - Solusi Otomasi Bisnis</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+    <link href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css)" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
+        @import url('[https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap](https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap)');
         body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
         .chat-container::-webkit-scrollbar { width: 4px; }
         .chat-container::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-        
-        /* Animasi Dot Typing */
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-4px); }
-        }
-        .animate-bounce-dot { animation: bounce 1s infinite; }
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -34,7 +25,7 @@
                 </div>
                 <span class="text-2xl font-black tracking-tighter">KOSMARA<span class="text-blue-600">.</span></span>
             </div>
-            <a href="https://api.whatsapp.com/send/?phone=6285189134621&text=Halo%20KOSMARA%20Saya%20Mau%20Konsultasi%20Website" class="hidden md:block bg-slate-900 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-blue-600 transition shadow-lg">Mulai Sekarang</a>
+            <a href="[https://api.whatsapp.com/send/?phone=6285189134621&text&type=phone_number&app_absent=0](https://api.whatsapp.com/send/?phone=6285189134621&text&type=phone_number&app_absent=0)" class="hidden md:block bg-slate-900 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-blue-600 transition shadow-lg">Mulai Sekarang</a>
         </div>
     </nav>
 
@@ -50,7 +41,7 @@
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <button onclick="toggleChat()" class="bg-blue-600 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition shadow-2xl shadow-blue-200">Tes Demo Chat AI</button>
-                <a href="https://api.whatsapp.com/send/?phone=6285189134621&text=Halo%20KOSMARA%20Saya%20Mau%20Konsultasi%20Website" class="bg-white border border-slate-200 text-slate-900 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-slate-50 transition">Konsultasi WhatsApp</a>
+                <a href="[https://api.whatsapp.com/send/?phone=6285189134621&text&type=phone_number&app_absent=0](https://api.whatsapp.com/send/?phone=6285189134621&text&type=phone_number&app_absent=0)" class="bg-white border border-slate-200 text-slate-900 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-slate-50 transition">Konsultasi WhatsApp</a>
             </div>
         </div>
     </section>
@@ -58,7 +49,6 @@
     <!-- CHAT INTERFACE -->
     <div id="chat-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm">
         <div class="bg-white w-full max-w-lg rounded-[2.5rem] shadow-2xl flex flex-col h-[85vh] overflow-hidden border border-white">
-            <!-- Header Chat -->
             <div class="bg-slate-900 text-white p-6 flex justify-between items-center shrink-0">
                 <div class="flex items-center gap-4">
                     <div class="relative">
@@ -69,41 +59,37 @@
                     </div>
                     <div>
                         <h4 class="font-bold text-sm">KOSMARA Assistant AI</h4>
-                        <p class="text-[10px] text-slate-400">Online 24/7 • Menjawab dalam 2 detik</p>
+                        <p class="text-[10px] text-slate-400">Online 24/7</p>
                     </div>
                 </div>
                 <button onclick="toggleChat()" class="text-slate-400 hover:text-white transition p-2"><i class="fas fa-times text-xl"></i></button>
             </div>
 
-            <!-- Area Chat -->
             <div id="chat-content" class="flex-1 overflow-y-auto p-6 space-y-6 bg-slate-50 chat-container">
-                <!-- Pesan Pembuka -->
                 <div class="flex gap-3">
                     <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs shrink-0 mt-1"><i class="fas fa-robot"></i></div>
                     <div class="bg-white border border-slate-200 p-4 rounded-2xl rounded-tl-none shadow-sm text-sm text-slate-700 leading-relaxed max-w-[85%]">
                         Halo! Saya <span class="font-bold text-blue-600">KOSMARA AI</span>. 👋<br><br>
-                        Saya siap membantu bisnis Anda berjalan otomatis 24 jam. Boleh tahu siapa nama Anda dan bergerak di bidang bisnis apa?
+                        Saya bisa membantu bisnis Anda merespon ribuan pelanggan secara otomatis. Bisnis Anda bergerak di bidang apa?
                     </div>
                 </div>
             </div>
 
-            <!-- Indikator Typing -->
             <div id="typing" class="px-8 py-2 hidden flex items-center gap-2 text-[10px] text-slate-400 italic">
                 <span class="flex gap-0.5">
-                    <span class="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce-dot"></span>
-                    <span class="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce-dot delay-100"></span>
-                    <span class="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce-dot delay-200"></span>
+                    <span class="w-1 h-1 bg-slate-400 rounded-full animate-bounce"></span>
+                    <span class="w-1 h-1 bg-slate-400 rounded-full animate-bounce delay-75"></span>
+                    <span class="w-1 h-1 bg-slate-400 rounded-full animate-bounce delay-150"></span>
                 </span>
-                KOSMARA sedang mengetik...
+                KOSMARA sedang berpikir...
             </div>
 
-            <!-- Input Area -->
             <div class="p-6 bg-white border-t border-slate-100 shrink-0">
                 <div class="flex gap-3">
-                    <input id="user-input" type="text" placeholder="Contoh: Saya Jualan Hijab..." 
+                    <input id="user-input" type="text" placeholder="Tulis pesan Anda..." 
                            class="flex-1 bg-slate-50 border border-slate-200 rounded-2xl px-6 py-4 text-sm focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition"
                            onkeypress="if(event.key === 'Enter') sendToGemini()">
-                    <button id="send-btn" onclick="sendToGemini()" class="bg-blue-600 hover:bg-blue-700 text-white w-14 h-14 rounded-2xl flex items-center justify-center transition shadow-lg shadow-blue-200 active:scale-95 disabled:bg-slate-400">
+                    <button onclick="sendToGemini()" class="bg-blue-600 hover:bg-blue-700 text-white w-14 h-14 rounded-2xl flex items-center justify-center transition shadow-lg shadow-blue-200 active:scale-95">
                         <i class="fas fa-paper-plane"></i>
                     </button>
                 </div>
@@ -112,131 +98,44 @@
     </div>
 
     <script>
-        // --- KONFIGURASI PENTING ---
-        // PERINGATAN: Jangan gunakan API Key asli di production frontend. Gunakan backend proxy untuk keamanan.
-        // Ganti 'PASTE_YOUR_API_KEY_HERE' dengan API KEY Gemini Anda.
-        const apiKey = "AIzaSyDCBldq5CTRSwBDHe64Y1XbZrtJj__j_tg"; // Pastikan API Key valid
-        
-        // --- SYSTEM PROMPT (OTAK AI) ---
-        const systemInstruction = `
-        PERAN: Anda adalah AI Spesialis Penjualan dari KOSMARA.
-        LAYANAN: Jasa Pembuatan Website, Landing Page Konversi Tinggi, Chatbot AI, dan Otomasi Bisnis.
-        
-        PROTOKOL KOMUNIKASI:
-        1. NADA BICARA: Profesional, Visioner, Solutif, dan Ramah (Bahasa Indonesia Luwes).
-        2. FORMAT: Gunakan formatting bold (**teks**) untuk poin penting. Maksimal 3 kalimat per respon.
-        
-        ATURAN UTAMA (FLOW):
-        1. VALIDASI: Jika user belum menyebutkan Nama & Jenis Bisnis, tanyakan dulu. Jangan berikan solusi sebelum tahu bisnis mereka.
-        2. PROBLEM SOLVING: Jika user mengeluh sepi/capek balas chat, jelaskan Website sebagai "Salesman 24 Jam".
-        3. CLOSING: Setelah memberikan solusi singkat, WAJIB arahkan user untuk konsultasi via WhatsApp.
-        
-        LINK WHATSAPP:
-        https://api.whatsapp.com/send/?phone=6285189134621&text=Halo%20KOSMARA%20Saya%20Mau%20Konsultasi%20Website
-        
-        CONTOH RESPON CLOSING:
-        "Solusi terbaik adalah Landing Page yang bekerja otomatis. Mari diskusi detailnya, silakan klik link ini: [Hubungi Tim Ahli Kami](LINK_WHATSAPP)"
-        `;
+        const apiKey = "AIzaSyDCBldq5CTRSwBDHe64Y1XbZrtJj__j_tg"; 
+        const systemPrompt = "Anda adalah Sales AI KOSMARA. Tugas: bantu klien buat web AI. Jawab singkat, ramah, dan suruh klik link WA: [https://api.whatsapp.com/send/?phone=6285189134621&text&type=phone_number&app_absent=0](https://api.whatsapp.com/send/?phone=6285189134621&text&type=phone_number&app_absent=0)";
 
-        // --- LOGIC CHAT ---
         function toggleChat() {
             const modal = document.getElementById('chat-modal');
-            const isHidden = modal.classList.contains('hidden');
-            if (isHidden) {
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-            } else {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-            }
-        }
-
-        // Fungsi Format Teks (Bold & Link)
-        function formatMessage(text) {
-            // Convert **bold** to <b>bold</b>
-            let formatted = text.replace(/\*\*(.*?)\*\*/g, '<b class="text-slate-900">$1</b>');
-            
-            // Convert URL to Clickable Link
-            formatted = formatted.replace(
-                /(https?:\/\/[^\s]+)/g, 
-                '<a href="$1" target="_blank" class="text-blue-600 font-bold underline hover:text-blue-800">Klik Di Sini (WhatsApp)</a>'
-            );
-            
-            // Convert Newline to <br>
-            return formatted.replace(/\n/g, '<br>');
+            modal.classList.toggle('hidden');
+            modal.classList.toggle('flex');
         }
 
         async function sendToGemini() {
             const input = document.getElementById('user-input');
-            const btn = document.getElementById('send-btn');
             const box = document.getElementById('chat-content');
-            const typeIndicator = document.getElementById('typing');
+            const type = document.getElementById('typing');
             const userText = input.value.trim();
 
             if(!userText) return;
 
-            // Disable input while loading
-            input.disabled = true;
-            btn.disabled = true;
-
-            // Tampilkan Pesan User
-            box.innerHTML += `
-                <div class="flex gap-3 justify-end animate-fade-in">
-                    <div class="bg-blue-600 text-white p-4 rounded-2xl rounded-tr-none shadow-md text-sm leading-relaxed max-w-[85%]">
-                        ${userText}
-                    </div>
-                </div>
-            `;
-            
-            input.value = ''; 
-            box.scrollTop = box.scrollHeight; 
-            typeIndicator.classList.remove('hidden');
+            box.innerHTML += `<div class="flex gap-3 justify-end"><div class="bg-blue-600 text-white p-4 rounded-2xl rounded-tr-none shadow-md text-sm leading-relaxed max-w-[85%]">${userText}</div></div>`;
+            input.value = ''; box.scrollTop = box.scrollHeight; type.classList.remove('hidden');
 
             try {
-                // Call Gemini API (Model: gemini-1.5-flash for speed)
-                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        contents: [{ 
-                            role: "user",
-                            parts: [{ text: userText }] 
-                        }],
-                        systemInstruction: {
-                            parts: [{ text: systemInstruction }]
-                        }
+                        contents: [{ parts: [{ text: userText }] }],
+                        systemInstruction: { parts: [{ text: systemPrompt }] }
                     })
                 });
 
                 const data = await response.json();
-                let aiText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+                let aiText = data.candidates?.[0]?.content?.parts?.[0]?.text || "Klik link WA untuk info: [https://api.whatsapp.com/send/?phone=6285189134621&text&type=phone_number&app_absent=0](https://api.whatsapp.com/send/?phone=6285189134621&text&type=phone_number&app_absent=0)";
                 
-                if (!aiText) {
-                    aiText = "Maaf, server sedang sibuk. Silakan langsung hubungi kami via WhatsApp: https://api.whatsapp.com/send/?phone=6285189134621";
-                }
-
-                // Tampilkan Respon AI
-                typeIndicator.classList.add('hidden');
-                box.innerHTML += `
-                    <div class="flex gap-3 animate-fade-in">
-                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs shrink-0 mt-1">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="bg-white border border-slate-200 p-4 rounded-2xl rounded-tl-none shadow-sm text-sm text-slate-700 leading-relaxed max-w-[85%]">
-                            ${formatMessage(aiText)}
-                        </div>
-                    </div>
-                `;
-                
-            } catch (err) {
-                console.error(err);
-                typeIndicator.classList.add('hidden');
-                box.innerHTML += `<div class="text-center text-xs text-red-500 mt-2">Gagal terhubung ke AI. Coba lagi nanti.</div>`;
-            } finally {
-                input.disabled = false;
-                btn.disabled = false;
-                input.focus();
+                type.classList.add('hidden');
+                box.innerHTML += `<div class="flex gap-3"><div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs shrink-0 mt-1"><i class="fas fa-robot"></i></div><div class="bg-white border border-slate-200 p-4 rounded-2xl rounded-tl-none shadow-sm text-sm text-slate-700 leading-relaxed max-w-[85%]">${aiText}</div></div>`;
                 box.scrollTop = box.scrollHeight;
+            } catch (err) {
+                type.classList.add('hidden');
             }
         }
     </script>
