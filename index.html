@@ -299,10 +299,48 @@ Boleh cerita, apa tantangan terbesar yang kamu hadapi sekarang di bisnis ini? (C
         // ============================================
         // 🔥 MAIN FUNCTION: SEND TO NETLIFY FUNCTION (SECURE)
         // ============================================
-        async function sendToGemini() {
-            const input = document.getElementById('user-input');
-            const btn = document.getElementById('send-btn');
-            const typeIndicator = document.getElementById('typing');
+async function sendToGemini1() {
+    const input = document.getElementById('user-input');
+    const btn = document.getElementById('send-btn');
+    const typeIndicator = document.getElementById('typing');
+    const userText = input.value.trim();
+
+    if (!userText) return;
+
+    input.disabled = true;
+    btn.disabled = true;
+
+    showUserMessage(userText);
+    input.value = '';
+    typeIndicator.classList.remove('hidden');
+
+    try {
+        // 🔥 FIXED: Simple body untuk /api/chat
+        const response = await fetch('/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userText })  // ✅ Simple format
+        });
+
+        const data = await response.json();
+
+        // 🔥 FIXED: Parse response dari /api/chat format
+        if (!data.success) {
+            throw new Error(data.error || 'Response failed');
+        }
+
+        typeIndicator.classList.add('hidden');
+        showAIMessage(data.message);  // ✅ data.message instead of data.candidates[0]...
+
+    } catch (err) {
+        console.error('Error:', err);
+        typeIndicator.classList.add('hidden');
+        showAIMessage("Koneksi terputus. Silakan **refresh halaman** atau langsung via WhatsApp. 🙏");
+    } finally {
+        input.disabled = false;
+        btn.disabled = false;
+    }
+}
             const userText = input.value.trim();
 
             if (!userText) return;
@@ -387,4 +425,5 @@ Boleh cerita, apa tantangan terbesar yang kamu hadapi sekarang di bisnis ini? (C
     </script>
 </body>
 </html>
+
 
